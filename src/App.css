@@ -24,6 +24,32 @@
   color: white;
 }
 
+.glow {
+    
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00d0d0, 0 0 20px #00d0d0, 0 0 25px #00d0d0, 0 0 30px #00d0d0, 0 0 35px #00d0d0;
+    animation: glow 1s ease-in-out infinite alternate;
+
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #26ff00, 0 0 10px #26ff00, 0 0 15px #00d0d0, 0 0 20px #00d0d0, 0 0 25px #00d0d0, 0 0 30px #00d0d0, 0 0 35px #00d0d0;
+  }
+  to {
+    text-shadow: 0 0 10px #26ff00, 0 0 20px #26ff00, 0 0 30px #00d0d0, 0 0 40px #00d0d0, 0 0 50px #00d0d0, 0 0 60px #00d0d0, 0 0 70px #00d0d0;
+  }
+}
+
+img:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+ 
+.shadow {filter: drop-shadow(18px 18px 25px #00d0d0);}
+
 .App-link {
   color: #61dafb;
 }
