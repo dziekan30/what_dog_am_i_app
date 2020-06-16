@@ -1,26 +1,16 @@
 import React from "react"
-import Question from '../Question'
-import questionsData from '../questionsData'
-
-// import Joke from "../Joke"
-// import jokesData from "../jokesData"
-
-// function Home() {
-//     const jokeComponents = jokesData.map(joke => <Joke key question={joke.question} punchLine={joke.punchLine} />)
-    
-    
-//     return (
-//         <div>
-//             {jokeComponents}            
-//         </div>
-//     )
-// }
-
-// export default Home
+import Question from './Question'
+import questionsData from './questionsData'
+import Result from './Result'
+import resultsData from './resultsData'
+// import {Card} from "react-bootstrap"
+// import {Container} from "react-bootstrap"
+// import {Button} from "react-bootstrap"
 
 
 function Home() {
   const questionComponents = questionsData.map(question => <Question 
+    key = {question.id}
     question={question.question} 
     answerA={question.answerA} 
     answerB={question.answerB} 
@@ -29,25 +19,27 @@ function Home() {
 
     /> )
 
+  const resultComponents = resultsData.map(result => <Result
+    key = {result.id}
+    dogName={result.dogName} 
+    imgUrl={result.imgUrl} 
+    dogBlurb={result.dogBlurb}
+
+    /> )
+
   
   return (
       <div>
         {questionComponents}
+        {resultComponents}
       </div>
     )
 }
+
 export default Home;
 
 
 
-
-
-// function App() {
-//     jokesData.map(joke => {
-//         return (
-//             <Joke question={joke.question} punchLine={joke.pu} />
-//         )
-//     })
 
 
 

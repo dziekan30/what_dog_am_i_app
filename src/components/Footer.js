@@ -8,15 +8,15 @@ function Footer() {
       <footer>
         <Jumbotron style={{ backgroundColor: "#0e4a4d", color: "#e8ffa1", bottom: 0,}}>
           <Container>
-          <div class="text-center">
+          <div className="text-center">
 
             <div >
-              <img  class="shadow" src="../dog.png" alt=""
+              <img  className="shadow" src="../dog.png" alt=""
                   style={{borderRadius: "50%", width: "500px", height: "500px" }}
                   />
             </div>
 
-            <div class="glow">
+            <div className="glow">
               <h1 style={{fontSize: "500%", fontWeight: "bold", letterSpacing: "5px"}} >Bark Yourself Out</h1>
             </div>
           </div>
