@@ -1,33 +1,31 @@
 import React from "react"
+import {Card} from "react-bootstrap"
+import {Container} from "react-bootstrap"
+import {Button} from "react-bootstrap"
 
 function Question(props) {
   return (
   <div>
-      <h3 style={{display: !props.question && "none"}}> Question: {props.question}</h3>
-      <h3 style={{display: !props.answerA && "none"}}> A: {props.answerA}</h3>
-      <h3 style={{display: !props.answerB && "none"}}> B: {props.answerB}</h3>
-      <h3 style={{display: !props.answerC && "none"}}> C: {props.answerC}</h3>
-      <h3 style={{display: !props.answerD && "none"}}> D: {props.answerD}</h3>
-      <hr/>
+  <div>
+    <Container >
+      <Card className="text-center">
+      <Card.Body>
+        <Card.Title>Question: {props.question}</Card.Title>
+        <Card.Title>A: {props.answerA}</Card.Title>
+        <Card.Title>B: {props.answerB}</Card.Title>
+        <Card.Title>C: {props.answerC}</Card.Title> 
+        <Card.Title>D: {props.answerD}</Card.Title>     
+      </Card.Body>
+        <Card.Footer> <Button variant="primary">Next</Button></Card.Footer>
+        <Card.Footer> <Button variant="primary">Previous</Button></Card.Footer>
+      </Card>
+    </Container>
+  </div>
   </div>
         );
 }
 
 export default Question;
-
-
-
-// function Joke(props) {
-//     return (
-//         <div>
-//             <h3 style={{display: !props.question && "none"}}>Question: {props.question}</h3>
-//             <h3 style={{color: !props.question && "#888888"}}>Answer: {props.punchLine}</h3>
-//             <hr/>
-//         </div>
-//     )
-// }
-
-// export default Joke
 
 
 
