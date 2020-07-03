@@ -12,11 +12,15 @@ import resultsData from './resultsData'
 function Home() {
   const questionComponents = questionsData.map(question => <Question 
     key = {question.id}
+    number = {question.id}
     question={question.question} 
     answerA={question.answerA} 
     answerB={question.answerB} 
     answerC={question.answerC}
     answerD={question.answerD}
+    score={question.score},
+    // finalScore={question.finalScore}
+    // incrementScore={this.incrementScore}
 
     /> )
 

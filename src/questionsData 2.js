@@ -3,12 +3,10 @@ const questionsData = [
     {
       id: 1,
       question: "What's your favorite ice cream flavor?",
-
       answerA: "Vanilla",
       answerB: "Moose Tracks",
       answerC: "Cherry Garcia",
-      answerD: "Salted Caramel Gelato",
-      score: 0,
+      answerD: "Salted Caramel Gelato"
     },
     {
       id: 2,
@@ -16,8 +14,7 @@ const questionsData = [
       answerA: "Baseball",
       answerB: "Basketball",
       answerC: "Soccer",
-      answerD: "Tennis",
-      score: 0,
+      answerD: "Tennis"
     },
     {
       id: 3,
@@ -25,8 +22,7 @@ const questionsData = [
       answerA: "Cancun",
       answerB: "Paris",
       answerC: "The Himalayas",
-      answerD: "Burning Man",
-      score: 0,
+      answerD: "Burning Man"
     },
     {
       id: 4,
@@ -34,8 +30,7 @@ const questionsData = [
       answerA: "My birthday!",
       answerB: "My best friend's wedding!",
       answerC: "St. Patrick's Day!",
-      answerD: "April Fool's!",
-      score: 0,
+      answerD: "April Fool's!"
     },
     {
       id: 5,
@@ -43,8 +38,7 @@ const questionsData = [
       answerA: "Blue",
       answerB: "Pink",
       answerC: "Teal",
-      answerD: "Black",
-      score: 0,
+      answerD: "Black"
     },
     {
       id: 6,
@@ -52,8 +46,7 @@ const questionsData = [
       answerA: "Doing something nice for someone",
       answerB: "Partying all night",
       answerC: "To crush your enemies, see them driven before you, and to hear the lamentations of their women!",
-      answerD: "A job well done",
-      score: 0,
+      answerD: "A job well done"
     },
     {
       id: 7,
@@ -61,8 +54,7 @@ const questionsData = [
       answerA: "Average height for a human male",
       answerB: "idk tall?",
       answerC: "Six foot even",
-      answerD: "Tall enough to play center in basketball.",
-      score: 0,
+      answerD: "Tall enough to play center in basketball."
     },
     {
       id: 8,
@@ -70,8 +62,7 @@ const questionsData = [
       answerA: "Romantic dinner",
       answerB: "Picnic in the park",
       answerC: "Eight mile hike in the mountains",
-      answerD: "That's a tough one. I'd have to say April 25th. Because it's not too hot, not too cold, all you need is a light jacket.",
-      score: 0,
+      answerD: "That's a tough one. I'd have to say April 25th. Because it's not too hot, not too cold, all you need is a light jacket."
     },
     {
       id: 9,
@@ -79,8 +70,7 @@ const questionsData = [
       answerA: "Summer",
       answerB: "Winter",
       answerC: "Fall",
-      answerD: "Spring",
-      score: 0,
+      answerD: "Spring"
     },
     {
       id: 10,
@@ -88,8 +78,7 @@ const questionsData = [
       answerA: "4 a.m., so I can get the most out of every day",
       answerB: "8 a.m., like a normal person",
       answerC: "Noon, if possible",
-      answerD: "Depends. When do I have to get up?",
-      score: 0,
+      answerD: "Depends. When do I have to get up?"
     },
 
                         ]                      
