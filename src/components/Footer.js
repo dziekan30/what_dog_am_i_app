@@ -5,7 +5,6 @@ import {Container} from 'react-bootstrap'
 function Footer() {
   return (
     <div>
-      <footer>
         <Jumbotron style={{ backgroundColor: "#0e4a4d", color: "#e8ffa1", bottom: 0,}}>
           <Container>
           <div className="text-center">
@@ -23,7 +22,6 @@ function Footer() {
 
           </Container>
         </Jumbotron>
-      </footer>
     </div>
     );
 }

@@ -12,6 +12,10 @@ const scoreHash = {Question1: 0,
               Question9: 0,
               Question10: 0}
 
+calculateFinalScore () => {
+  
+}
+
 if (chosenAnswer1 = AnswerA) {
     Question1 += 5;
   } else if (chosenAnswer1 = AnswerB) {
@@ -28,18 +32,28 @@ totalScore = scoreHash.values.sum
 
 switch(showScore) {
   case totalScore < 20: 
+    Answer = Golden Retriever;
+    break;
     Answer = resultsData.dogName, resultsData.dogBlurb;
     break;
   case totalScore >= 20 && totalScore < 45: 
     Answer = Pug;
     break;
   case totalScore >= 45 && totalScore < 70: 
-    Answer = 
+    Answer = Pomeranian;
+    break;
   case totalScore >= 70 && totalScore < 95:
+    Answer = Golden Retriever;
+    break;
   case totalScore >= 95 && totalScore < 120: 
+    Answer = Pit Bull;
+    break;
   case totalScore >= 120 && totalScore < 150:
+    Answer = Border Collie;
+    break;
   case totalScore >= 150: 
-
+    Answer = Chihuahua;
+    break;
   }
 
 export default Score;

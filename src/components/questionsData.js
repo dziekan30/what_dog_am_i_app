@@ -2,25 +2,25 @@ const questionsData = [
 
     {
       id: 1,
-      question: "What's your favorite ice cream flavor?",
+      query: "What's your favorite ice cream flavor?",
       answerA: "Vanilla",
       answerB: "Moose Tracks",
       answerC: "Cherry Garcia",
-      answerD: "Salted Caramel Gelato"
+      answerD: "Salted Caramel Gelato",
       score: 0
     },
     {
       id: 2,
-      question: "What's your favorite sport?",
+      query: "What's your favorite sport?",
       answerA: "Baseball",
       answerB: "Basketball",
       answerC: "Soccer",
-      answerD: "Tennis"
+      answerD: "Tennis",
       score: 0
     },
     {
       id: 3,
-      question: "If you could travel anywhere, where would you go?",
+      query: "If you could travel anywhere, where would you go?",
       answerA: "Cancun",
       answerB: "Paris",
       answerC: "The Himalayas",
@@ -29,7 +29,7 @@ const questionsData = [
     },
     {
       id: 4,
-      question: "What's your favorite holiday?",
+      query: "What's your favorite holiday?",
       answerA: "My birthday!",
       answerB: "My best friend's wedding!",
       answerC: "St. Patrick's Day!",
@@ -38,7 +38,7 @@ const questionsData = [
     },
     {
       id: 5,
-      question: "What's your favorite color?",
+      query: "What's your favorite color?",
       answerA: "Blue",
       answerB: "Pink",
       answerC: "Teal",
@@ -47,7 +47,7 @@ const questionsData = [
     },
     {
       id: 6,
-      question: "What makes you happy?",
+      query: "What makes you happy?",
       answerA: "Doing something nice for someone",
       answerB: "Partying all night",
       answerC: "To crush your enemies, see them driven before you, and to hear the lamentations of their women!",
@@ -56,7 +56,7 @@ const questionsData = [
     },
     {
       id: 7,
-      question: "How tall are you?",
+      query: "How tall are you?",
       answerA: "Average height for a human male",
       answerB: "idk tall?",
       answerC: "Six foot even",
@@ -65,7 +65,7 @@ const questionsData = [
     },
     {
       id: 8,
-      question: "What's your ideal date?",
+      query: "What's your ideal date?",
       answerA: "Romantic dinner",
       answerB: "Picnic in the park",
       answerC: "Eight mile hike in the mountains",
@@ -74,7 +74,7 @@ const questionsData = [
     },
     {
       id: 9,
-      question: "What's your favorite season?",
+      query: "What's your favorite season?",
       answerA: "Summer",
       answerB: "Winter",
       answerC: "Fall",
@@ -83,7 +83,7 @@ const questionsData = [
     },
     {
       id: 10,
-      question: "What time do you get up?",
+      query: "What time do you get up?",
       answerA: "4 a.m., so I can get the most out of every day",
       answerB: "8 a.m., like a normal person",
       answerC: "Noon, if possible",
