@@ -16,7 +16,7 @@ function Footer() {
             </div>
 
             <div className="glow">
-              <h1 style={{fontSize: "500%", fontWeight: "bold", letterSpacing: "5px"}} >Bark Yourself Out</h1>
+              <h1 style={{fontSize: "500%", fontWeight: "bold", letterSpacing: "5px"}} >Bow Wow Yourself Out</h1>
             </div>
           </div>
 

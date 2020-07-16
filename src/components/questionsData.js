@@ -89,8 +89,10 @@ const questionsData = [
       answerC: "Noon, if possible",
       answerD: "Depends. When do I have to get up?",
       score: 0
-    },
+    }
 
-                        ]                      
+                        ]  
+
+                   
 
 export default questionsData;

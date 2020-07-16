@@ -66,3 +66,4 @@ totalScore = function(scoreArray){
       return a + b
     }, 0);
 }
+
