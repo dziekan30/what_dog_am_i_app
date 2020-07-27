@@ -90,8 +90,6 @@ const questionsData = [
       answerD: "Depends. When do I have to get up?",
       score: 0
     }
-
-                        ]  
-                   
+]     
 
 export default questionsData;

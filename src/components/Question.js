@@ -27,35 +27,35 @@ class Question extends React.Component{
       this.setState({
         selectAnswerA: !this.state.selectAnswerA
     });
-    console.log(this.state.selectAnswerA);
+    // console.log(this.state.selectAnswerA);
   }
 
   handleToggleAnswerB() {
       this.setState({
         selectAnswerB: !this.state.selectAnswerB
     });
-    console.log(this.state.selectAnswerB);
+    // console.log(this.state.selectAnswerB);
   }
 
   handleToggleAnswerC() {
       this.setState({
         selectAnswerC: !this.state.selectAnswerC
     });
-    console.log(this.state.selectAnswerC);
+    // console.log(this.state.selectAnswerC);
   }
 
   handleToggleAnswerD() {
       this.setState({
         selectAnswerD: !this.state.selectAnswerD
     });
-    console.log(this.state.selectAnswerD);
+    // console.log(this.state.selectAnswerD);
   }
 
   handleIncreaseScore() {
       this.setState({
         finalScore: this.state.finalScore + 1
       })
-      console.log(this.state.finalScore)
+      // console.log(this.state.finalScore)
       let value = ""
       if (this.state.selectAnswerA === true) {
         value = "A"
@@ -66,7 +66,7 @@ class Question extends React.Component{
       } else if (this.state.selectAnswerD === true) {
         value = "D"
       }
-      console.log(value, "waffle");
+      // console.log(value, "waffle");
       this.props.handleIncreaseScore(value);
       this.props.handleNextQuestion();
   };
