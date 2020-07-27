@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Question from "./Question";
 import questionsData from './questionsData';
+import Score from './Score';
 
 class Home extends Component {
   constructor(props) {
@@ -19,8 +20,6 @@ class Home extends Component {
           AnswerD: '',
           scoreArray: []
         }
-        this.componentDidMount = this.componentDidMount.bind(this);
-        this.checkAnswer = this.checkAnswer.bind(this);
         this.handleIncreaseScore = this.handleIncreaseScore.bind(this);
         this.handleNextQuestion = this.handleNextQuestion.bind(this);
     } 
@@ -43,26 +42,6 @@ class Home extends Component {
 
         }
 
-  checkAnswer(event) {
-    let { isAnswered } = this.props;
-
-    if(!isAnswered) {
-      let elem = event.currentTarget;
-
-      let { increaseScore } = this.props;
-
-      if (elem === this.AnswerA) {
-        increaseScore(5);
-      } else if (elem === this.AnswerB) {
-        increaseScore(10); 
-      } else if (elem === this.AnswerC) {
-        increaseScore(15);
-      } else if (elem === this.AnswerD) {
-        increaseScore(20);
-      }
-    };
-  };
-
   handleIncreaseScore(value) {
       const scoreArray = this.state.scoreArray
       scoreArray.push(value)
@@ -84,10 +63,6 @@ class Home extends Component {
         <div>
 
             <div>
-
-            </div>
-
-            <div>
             {questionsData.map(question => 
             <Question 
               question={question} 
@@ -97,6 +72,7 @@ class Home extends Component {
               handleIncreaseScore={this.handleIncreaseScore}
             />
               )}
+            <Score scoreArray={this.state.scoreArray} />
             </div>
           </div>
         );
