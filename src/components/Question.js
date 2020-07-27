@@ -1,85 +1,113 @@
-import React, {Component} from "react"
+import React from "react"
 import {Container} from "react-bootstrap"
 import {Card} from "react-bootstrap"
 import {Button} from "react-bootstrap"
+import questionsData from './questionsData';
 
 // const finalScore = 4
 class Question extends React.Component{
   constructor(props) {
     super(props);
-    // this.state = {finalScore: 0};
-    this.state = {score: 0};
-    this.state = {selectAnswerA: false};
-    this.state = {selectAnswerB: false};
-    this.state = {selectAnswerC: false};
-    this.state = {selectAnswerD: false};
-    // this.state = {selectScore: 0};
+    this.state = {
+      finalScore: 0,
+      selectAnswerA: false,
+      selectAnswerB: false,
+      selectAnswerC: false,
+      selectAnswerD: false
+    };
 
     this.handleIncreaseScore = this.handleIncreaseScore.bind(this);
-    this.finalScore = 0;    
-
-    // this.handleClick = this.handleClick.bind(this);
-    // this.handleIncreaseScore = this.handleIncreaseScore.bind(this);
-
-
-
-
+    this.handleToggleAnswerA = this.handleToggleAnswerA.bind(this);
+    this.handleToggleAnswerB = this.handleToggleAnswerB.bind(this);
+    this.handleToggleAnswerC = this.handleToggleAnswerC.bind(this);
+    this.handleToggleAnswerD = this.handleToggleAnswerD.bind(this);
   };
 
+  handleToggleAnswerA() {
+      this.setState({
+        selectAnswerA: !this.state.selectAnswerA
+    });
+    console.log(this.state.selectAnswerA);
+  }
+
+  handleToggleAnswerB() {
+      this.setState({
+        selectAnswerB: !this.state.selectAnswerB
+    });
+    console.log(this.state.selectAnswerB);
+  }
+
+  handleToggleAnswerC() {
+      this.setState({
+        selectAnswerC: !this.state.selectAnswerC
+    });
+    console.log(this.state.selectAnswerC);
+  }
+
+  handleToggleAnswerD() {
+      this.setState({
+        selectAnswerD: !this.state.selectAnswerD
+    });
+    console.log(this.state.selectAnswerD);
+  }
+
   handleIncreaseScore() {
-     console.log(this.finalScore = this.finalScore + 1);
-     }
-
-
-//     onMove = () => {
-//             console.log(this.state.finalScore);
-//             this.setState({ finalScore: finalScore + 2 });
-
-// }
-    // handleClick() {
-    //   this.setState(state => ({
-    //     selectAnswerA: !state.selectAnswerA
-    //   }));
-    // }
-
-    // handleIncreaseScore() {
-    //   var finalScore = 1
-    //   // this.setState({
-    //   //          finalScore: this.state.finalScore + 5
-    //   //       });
-    //     }
+      this.setState({
+        finalScore: this.state.finalScore + 1
+      })
+      console.log(this.state.finalScore)
+      let value = ""
+      if (this.state.selectAnswerA === true) {
+        value = "A"
+      } else if (this.state.selectAnswerB === true) {
+        value = "B"
+      } else if (this.state.selectAnswerC === true) {
+        value = "C"
+      } else if (this.state.selectAnswerD === true) {
+        value = "D"
+      }
+      console.log(value, "waffle");
+      this.props.handleIncreaseScore(value);
+      this.props.handleNextQuestion();
+  };
 
   render() {
+    if (this.props.question.id !== this.props.counter) {
+      return null
+    } 
     return (
       <div>
         <Container>
           <Card>
-            <Card.Header style={{color: "red"}}> Question {this.props.number}: {this.props.question}</Card.Header>
+            <Card.Header style={{color: "red"}}> Question {this.props.question.id}: {this.props.question.query}</Card.Header>
             <Card.Body>
-              <Card.Title> 
-                <Button style={{backgroundColor: "#003434"}} onClick={this.selectAnswer}>
-                  A: {this.props.answerA} {this.state.selectAnswerA ? true : false}
+              <Card.Title>
+                <Button style={{backgroundColor: "#003434"}} onClick={this.handleToggleAnswerA}>
+                  A: {this.props.question.answerA}
                 </Button>
               </Card.Title>
-              <Card.Title> 
-                <Button style={{backgroundColor: "#003434"}} onClick={this.selectAnswer}>
-                  B: {this.props.answerB} {this.state.selectAnswerB ? true : false}
+              <Card.Title>
+                <Button style={{backgroundColor: "#003434"}} onClick={this.handleToggleAnswerB}>
+                  B: {this.props.question.answerB}
                 </Button>
               </Card.Title>
-              <Card.Title> 
-                <Button style={{backgroundColor: "#003434"}} onClick={this.selectAnswer}>
-                  C: {this.props.answerC} {this.state.selectAnswerC ? true : false}
+              <Card.Title>
+                <Button style={{backgroundColor: "#003434"}} onClick={this.handleToggleAnswerC}>
+                  C: {this.props.question.answerC} 
                 </Button>
               </Card.Title>
-              <Card.Title> 
-                <Button style={{backgroundColor: "#003434"}} onClick={this.selectAnswer}>
-                  D: {this.props.answerD} {this.state.selectAnswerD ? true : false}
+              <Card.Title>
+                <Button style={{backgroundColor: "#003434"}} onClick={this.handleToggleAnswerD}>
+                  D: {this.props.question.answerD} 
                 </Button>
+              </Card.Title>
+              <Card.Title>
+              <Button style={{backgroundColor: "#003434"}} onClick={this.handleIncreaseScore} variant="info">Next</Button>
               </Card.Title>
             </Card.Body>
-              <Card.Footer> <Button onClick={this.handleIncreaseScore} variant="info">Next</Button></Card.Footer>
-              <div>
-              </div>
+            <div>
+              
+            </div>
           </Card>
         </Container>
       </div>
@@ -88,50 +116,3 @@ class Question extends React.Component{
 }
 
 export default Question;
-
-
-
-
-
-
-
-// handleIncreaseScore() {
-//         this.setState({
-//           if (selectAnswerA) {
-//             score = this.state.score + 1;
-//           }
-//           else if (selectAnswerB) { 
-//             score = this.state.score + 2;
-//           }
-//           else if (selectAnswerC) {
-//             score = this.state.score + 3;
-//           }
-//           else if (selectAnswerD) {
-//             score = this.state.score + 4;
-//           };
-//         });
-//     }
-
-// if answerA || answerB  || answerC || answerD
-//   true
-// score += +1
-
-// incrementScore = (QuestionId) => {
-//         // console.log('increment playerId', playerId)
-//         // what player got clicked? -> call incrementScore with a playerId
-//         // update the score of the correct player
-//         const updatedPlayers = this.state.players
-//             .map(player => {
-//                 // player got clicked -> update score
-//                 if(player.id === playerId){
-//                     return { ...player, score: player.score + 1 }
-//                 }
-//                 // this is not the right player, don't do anything
-//                 return player
-//             })
-//         this.setState({ players: updatedPlayers }) // -> render and display updated players
-//         // this.setState() to change the state
-//     }
-
-
-// <button onClick={() => props.incrementScore(props.id)}>D: {this.props.answerD} </button>
