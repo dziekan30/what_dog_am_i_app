@@ -22,6 +22,7 @@ class Home extends Component {
         }
         this.handleIncreaseScore = this.handleIncreaseScore.bind(this);
         this.handleNextQuestion = this.handleNextQuestion.bind(this);
+        this.handleRestartQuiz = this.handleRestartQuiz.bind(this);
     } 
 
     componentDidMount() {
@@ -57,6 +58,14 @@ class Home extends Component {
     })
   }
 
+
+  handleRestartQuiz() {
+    this.setState({
+      scoreArray: [],
+      counter: 1
+    })
+  }
+
   render() {
 
     return (
@@ -72,7 +81,10 @@ class Home extends Component {
               handleIncreaseScore={this.handleIncreaseScore}
             />
               )}
-            <Score scoreArray={this.state.scoreArray} />
+            <Score 
+              handleRestartQuiz={this.handleRestartQuiz} 
+              scoreArray={this.state.scoreArray} 
+            />
             </div>
           </div>
         );
