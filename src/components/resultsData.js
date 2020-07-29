@@ -36,9 +36,7 @@ const resultsData = [
     dogName: "Pomeranian",
     dogBlurb: "Pretentious, high-maintenance, and faultlessly elegant. You like the finer things in life, and you're always eager to pamper yourself. Spa days, trips to Paris, and haute cuisine are your favorite things."
   }
-
-
-
+  
 ]
 
 export default resultsData;

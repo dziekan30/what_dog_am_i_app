@@ -6,7 +6,7 @@ class Score extends Component {
         super(props);
         
         this.totalScore = this.totalScore.bind(this);
-    } 
+  } 
 
     totalScore() {
       let scoreTotal = 0
@@ -45,47 +45,18 @@ class Score extends Component {
     if (this.props.scoreArray.length < 1) {
       return null
     }
+
     const totalScore = this.totalScore()
     const answer = this.getAnswer(totalScore)
+
     return(
       <div>
         <h1>Hello!</h1>
         {answer.dogName}
         {answer.dogBlurb}
       </div>
-  )};
+    )
+  };
 }
 
 export default Score;
-
-
-
-
-  
-    
-
-  // switch(scoreTotal) {
-  //   // case (5)
-  //   //   Answer = Golden Retriever;
-  //   //   break;
-  //   //   Answer = resultsData.dogName, resultsData.dogBlurb;
-  //   //   break;
-  //   // case 45: 
-  //   //   Answer = Pug;
-  //   //   break;
-  //   // case 70: 
-  //   //   Answer = Pomeranian;
-  //   //   break;
-  //   // case 95:
-  //   //   Answer = Golden Retriever;
-  //   //   break;
-  //   // case 120: 
-  //   //   Answer = Pit Bull;
-  //   //   break;
-  //   // case 150:
-  //   //   Answer = Border Collie;
-  //   //   break;
-  //   // case 150: 
-  //   //   Answer = Chihuahua;
-  //   //   break;
-  // }
