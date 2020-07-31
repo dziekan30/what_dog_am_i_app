@@ -56,12 +56,34 @@ class Score extends Component {
     return(
       <div className="result-background">
         <Container >
-          <img className="result-img" src={answer.imgUrl} alt="" />
-          {answer.dogName}
-          {answer.dogBlurb}
-          <Card.Title style={{marginBottom: 0}}>
-            <Button style={{backgroundColor: "#003434", marginBottom: 0}} onClick={this.props.handleRestartQuiz} variant="info">Restart</Button>
-          </Card.Title>
+        <div className="Container">
+          <div className="frame">
+            <div className="mat">
+              <div className="result-dog-name">
+                <h1>You're a {answer.dogName}</h1>
+              </div>
+                <div className="art">
+                  <img className="result-img result-background-img" src={answer.imgUrl} alt="" />
+               </div>
+               <div>
+                <h5 className="result-blurb">{answer.dogBlurb}</h5>
+                
+                  <Button 
+                    className="restart-button" 
+                    style={{backgroundColor: "#003434", marginBottom: 0}} 
+                    onClick={this.props.handleRestartQuiz} 
+                    variant="info"
+                    size="lg" 
+                    block 
+                    >
+                    Restart
+                  </Button>
+               </div>
+
+            </div>
+          </div>
+        </div>
+
         </Container>
       </div>
     )

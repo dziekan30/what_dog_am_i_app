@@ -1,15 +1,12 @@
 import React from "react"
-import {Container} from "react-bootstrap"
-import {Card} from "react-bootstrap"
-import {Button} from "react-bootstrap"
-import questionsData from './questionsData';
+import {Container, Card, Button} from "react-bootstrap"
 
-// const finalScore = 4
 class Question extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
       finalScore: 0,
+      isDisabled: true,
       selectAnswerA: false,
       selectAnswerB: false,
       selectAnswerC: false,
@@ -25,33 +22,45 @@ class Question extends React.Component{
 
   handleToggleAnswerA() {
       this.setState({
-        selectAnswerA: !this.state.selectAnswerA
+        selectAnswerA: true, 
+        selectAnswerB: false, 
+        selectAnswerC: false,
+        selectAnswerD: false,
+        isDisabled: false
     });
   }
 
   handleToggleAnswerB() {
       this.setState({
-        selectAnswerB: !this.state.selectAnswerB
+        selectAnswerB: true,
+        selectAnswerA: false, 
+        selectAnswerC: false,
+        selectAnswerD: false,
+        isDisabled: false
     });
   }
 
   handleToggleAnswerC() {
       this.setState({
-        selectAnswerC: !this.state.selectAnswerC
+        selectAnswerC: true,
+        selectAnswerA: false, 
+        selectAnswerB: false,
+        selectAnswerD: false,
+        isDisabled: false
     });
   }
 
   handleToggleAnswerD() {
       this.setState({
-        selectAnswerD: !this.state.selectAnswerD
+        selectAnswerD: true,
+        selectAnswerA: false, 
+        selectAnswerB: false,
+        selectAnswerC: false,
+        isDisabled: false
     });
   }
 
   handleIncreaseScore() {
-      this.setState({
-        finalScore: this.state.finalScore + 1
-      })
-
       let value = ""
 
       if (this.state.selectAnswerA === true) {
@@ -65,6 +74,13 @@ class Question extends React.Component{
       }
 
       this.props.handleIncreaseScore(value);
+      this.setState({
+        selectAnswerA: false,
+        selectAnswerB: false,
+        selectAnswerC: false,
+        selectAnswerD: false,
+        isDisabled: true
+      })
       this.props.handleNextQuestion();
   };
 
@@ -80,35 +96,66 @@ class Question extends React.Component{
             <Card.Body>
 
 
-            <div className="row button">
-              <Card.Title className="single-button-left">
-                <Button style={{backgroundColor: "#003434"}} onClick={this.handleToggleAnswerA}>
+            <div >
+              <Card.Title >
+                <Button 
+
+                  style={this.state.selectAnswerA? null: {backgroundColor: "#003434"}}  
+                  size="lg" 
+                  block 
+                  onClick={this.handleToggleAnswerA}
+                  >
                   A: {this.props.question.answerA}
                 </Button>
               </Card.Title>
 
-              <Card.Title className="single-button-left">
-                <Button style={{backgroundColor: "#003434"}} onClick={this.handleToggleAnswerB}>
+              <Card.Title >
+                <Button 
+                  style={this.state.selectAnswerB? null:{backgroundColor: "#003434"}}  
+                  size="lg" 
+                  block 
+                  onClick={this.handleToggleAnswerB}
+                  >
                   B: {this.props.question.answerB}
                 </Button>
               </Card.Title>
             </div>
 
-              <div className="row button">
-                <Card.Title className="single-button-right">
-                  <Button style={{backgroundColor: "#003434"}} onClick={this.handleToggleAnswerC}>
+              <div >
+                <Card.Title >
+                  <Button 
+                    style={this.state.selectAnswerC? null: {backgroundColor: "#003434"}}  
+                    size="lg" 
+                    block 
+                    onClick={this.handleToggleAnswerC}
+                    >
                     C: {this.props.question.answerC} 
                   </Button>
                 </Card.Title>
-                <Card.Title className="single-button-right">
-                  <Button style={{backgroundColor: "#003434"}} onClick={this.handleToggleAnswerD}>
+                <Card.Title >
+                  <Button 
+                    style={this.state.selectAnswerD? null: {backgroundColor: "#003434"}}  
+                    size="lg" 
+                    block 
+                    onClick={this.handleToggleAnswerD}
+                    >
                     D: {this.props.question.answerD} 
                   </Button>
                 </Card.Title>
               </div>
 
               <Card.Title>
-              <Button style={{backgroundColor: "#003434"}} onClick={this.handleIncreaseScore} variant="info">Next</Button>
+              <Button 
+                style={{backgroundColor: "#003434"}} 
+                id="nextButton" 
+                disabled={this.state.isDisabled}
+                size="lg" 
+                block 
+                onClick={this.handleIncreaseScore} 
+                variant="info"
+                >
+                Next
+              </Button>
               </Card.Title>
             </Card.Body>
             <div>

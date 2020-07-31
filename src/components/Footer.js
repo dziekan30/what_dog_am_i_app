@@ -9,7 +9,7 @@ function Footer() {
           <div className="text-center">
 
             <div >
-              <img  className="shadow" src="../dog.png" alt=""
+              <img  className="shadow hover" src="../dog.png" alt=""
                   style={{borderRadius: "50%", width: "500px", height: "500px" }}
               />
             </div>
