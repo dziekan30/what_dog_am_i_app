@@ -92,7 +92,8 @@ class Question extends React.Component{
       <div className="question-background">
         <Container>
           <Card>
-            <Card.Header style={{color: "red"}}> Question {this.props.question.id}: {this.props.question.query}</Card.Header>
+            <Card.Header className="question"> 
+            Question {this.props.question.id}: {this.props.question.query}</Card.Header>
             <Card.Body>
 
 

@@ -95,14 +95,18 @@
   background-color: #0e4a4d;
 }
 .button {
-
   justify-content: center;
 }
 .restart-button {
   text-align: center;
-  margin-top: 2%;
+  margin-top: 2%; 
+}
+.question {
+  background-color: #003434;
+  color: white;
+  font-size: 180%;
 
-  
+
 }
 
 .shadow {filter: drop-shadow(18px 18px 25px #00d0d0);}
