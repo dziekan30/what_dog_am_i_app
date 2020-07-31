@@ -2,10 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -42,16 +39,83 @@
   }
 }
 
-img:hover {
+.hover:hover {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 
- 
+.result-img {
+  width: 60%;
+  height: 80%;
+  margin: auto;
+}
+
+.result-background {
+  background-color: #25aa92;
+  padding: 5%;
+}
+.result-background-img {
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+}
+.result-dog-name {
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-align: center;
+  margin: 2%;
+  
+
+}
+.result-blurb {
+  text-align: center;
+  vertical-align: text-bottom;
+  margin-top: 60%;
+  margin-bottom: 0;
+  overflow: scroll;
+
+}
+.header {
+  background-color: #0e4a4d;
+  color: #e8ffa1;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+.footer {
+  border-radius: 0;
+  background-color: #0e4a4d;
+  color: #e8ffa1;
+  margin-bottom: 0;
+}
+.question-background {
+  background-color: #00B3B3;
+  padding: 5%
+}
+.jumbotron {
+  background-color: #0e4a4d;
+}
+.button {
+  justify-content: center;
+}
+.restart-button {
+  text-align: center;
+  margin-top: 2%; 
+}
+.question {
+  background-color: #003434;
+  color: white;
+  font-size: 180%;
+
+
+}
+
 .shadow {filter: drop-shadow(18px 18px 25px #00d0d0);}
 
 .App-link {
   color: #61dafb;
+}
+@body {
+  background-color: #0e4a4d ;
 }
 
 @keyframes App-logo-spin {
@@ -61,4 +125,28 @@ img:hover {
   to {
     transform: rotate(360deg);
   }
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  padding-bottom: 82.5%;
+  background: black;
+  box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.3);
+}
+
+.mat {
+  position: absolute;
+  background: white;
+  top: 3.0303%; bottom: 3.0303%; left: 2.5%; right: 2.5%;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5) inset;
+}
+
+.art {
+  position: absolute;
+  top: 16.129%; bottom: 16.129%; left: 13.158%; right: 13.158%;
+}
+
+.art img {
+  width: 100%;
 }

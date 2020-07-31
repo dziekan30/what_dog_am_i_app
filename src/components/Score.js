@@ -1,13 +1,12 @@
 import React, {Component} from "react";
-import {Card} from "react-bootstrap";
-import {Button} from "react-bootstrap";
+import {Card, Button, Container} from "react-bootstrap";
 import resultsData from './resultsData';
 
 class Score extends Component {
   constructor(props) {
         super(props);
         this.totalScore = this.totalScore.bind(this);
-    } 
+  } 
 
     totalScore() {
       let scoreTotal = 0
@@ -50,52 +49,45 @@ class Score extends Component {
     if (this.props.scoreArray.length < 10) {
       return null
     }
+
     const totalScore = this.totalScore()
     const answer = this.getAnswer(totalScore)
-    return(
-      <div>
-        <img src={answer.imgUrl} alt="" />
-        <h1>Hello!</h1>
-        {answer.dogName}
-        {answer.dogBlurb}
-      <Card.Title>
-      <Button style={{backgroundColor: "#003434"}} onClick={this.props.handleRestartQuiz} variant="info">Restart</Button>
-      </Card.Title>
-      </div>
 
-  )};
+    return(
+      <div className="result-background">
+        <Container >
+        <div className="Container">
+          <div className="frame">
+            <div className="mat">
+              <div className="result-dog-name">
+                <h1>You're a {answer.dogName}</h1>
+              </div>
+                <div className="art">
+                  <img className="result-img result-background-img" src={answer.imgUrl} alt="" />
+               </div>
+               <div>
+                <h5 className="result-blurb">{answer.dogBlurb}</h5>
+                
+                  <Button 
+                    className="restart-button" 
+                    style={{backgroundColor: "#003434", marginBottom: 0}} 
+                    onClick={this.props.handleRestartQuiz} 
+                    variant="info"
+                    size="lg" 
+                    block 
+                    >
+                    Restart
+                  </Button>
+               </div>
+
+            </div>
+          </div>
+        </div>
+
+        </Container>
+      </div>
+    )
+  };
 }
 
 export default Score;
-
-
-
-
-  
-    
-
-  // switch(scoreTotal) {
-  //   // case (5)
-  //   //   Answer = Golden Retriever;
-  //   //   break;
-  //   //   Answer = resultsData.dogName, resultsData.dogBlurb;
-  //   //   break;
-  //   // case 45: 
-  //   //   Answer = Pug;
-  //   //   break;
-  //   // case 70: 
-  //   //   Answer = Pomeranian;
-  //   //   break;
-  //   // case 95:
-  //   //   Answer = Golden Retriever;
-  //   //   break;
-  //   // case 120: 
-  //   //   Answer = Pit Bull;
-  //   //   break;
-  //   // case 150:
-  //   //   Answer = Border Collie;
-  //   //   break;
-  //   // case 150: 
-  //   //   Answer = Chihuahua;
-  //   //   break;
-  // }
