@@ -22,12 +22,12 @@ class Home extends Component {
         }
         this.handleIncreaseScore = this.handleIncreaseScore.bind(this);
         this.handleNextQuestion = this.handleNextQuestion.bind(this);
+        this.handleRestartQuiz = this.handleRestartQuiz.bind(this);
     } 
 
     componentDidMount() {
       this.setState(questionsData.map(question => 
         this.setState({
-
           id: question.id,
           key: question.id,
           query: question.query, 
@@ -36,11 +36,9 @@ class Home extends Component {
           AnswerC: question.answerC,
           AnswerD: question.answerD,
           score: question.score
-
         })
-        ))
-
-        }
+      ))
+    }
 
   handleIncreaseScore(value) {
       const scoreArray = this.state.scoreArray
@@ -57,27 +55,34 @@ class Home extends Component {
     })
   }
 
+  handleRestartQuiz() {
+    this.setState({
+      scoreArray: [],
+      counter: 1
+    })
+  }
+
   render() {
-
     return (
-        <div>
-
-            <div>
-            {questionsData.map(question => 
-            <Question 
-              question={question} 
-              key={question.id}
-              counter={this.state.counter}
-              handleNextQuestion={this.handleNextQuestion}
-              handleIncreaseScore={this.handleIncreaseScore}
-            />
-              )}
-            <Score scoreArray={this.state.scoreArray} />
-            </div>
+      <div>
+          <div>
+          {questionsData.map(question => 
+          <Question 
+            question={question} 
+            key={question.id}
+            counter={this.state.counter}
+            handleNextQuestion={this.handleNextQuestion}
+            handleIncreaseScore={this.handleIncreaseScore}
+          />
+            )}
+          <Score 
+            handleRestartQuiz={this.handleRestartQuiz} 
+            scoreArray={this.state.scoreArray} 
+          />
           </div>
-        );
-
-    }
+      </div>
+    );
+  }
 }
 
 export default Home;

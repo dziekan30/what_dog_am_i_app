@@ -47,11 +47,53 @@ img:hover {
   transform: scaleX(-1);
 }
 
- 
+.result-img {
+  width: 600px;
+  height: 400px;
+}
+
+.result-background {
+  background-color: #25aa92;
+
+}
+.header {
+  background-color: #0e4a4d;
+  color: #e8ffa1;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+.footer {
+  border-radius: 0;
+  background-color: #0e4a4d;
+  color: #e8ffa1;
+  margin-bottom: 0;
+}
+.question-background {
+  background-color: #00B3B3;
+  padding: 5%
+}
+.jumbotron {
+  background-color: #0e4a4d;
+}
+.button {
+
+  justify-content: center;
+}
+.single-button-left {
+  margin-right: 10%;
+  margin-left: 4%;
+}
+.single-button-right {
+  margin-right: 4%;
+  margin-left: 10%;
+}
 .shadow {filter: drop-shadow(18px 18px 25px #00d0d0);}
 
 .App-link {
   color: #61dafb;
+}
+@body {
+  background-color: #0e4a4d ;
 }
 
 @keyframes App-logo-spin {

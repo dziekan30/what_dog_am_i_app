@@ -1,10 +1,10 @@
 import React, {Component} from "react";
-import resultsData from './resultsData'
+import {Card, Button, Container} from "react-bootstrap";
+import resultsData from './resultsData';
 
 class Score extends Component {
   constructor(props) {
         super(props);
-        
         this.totalScore = this.totalScore.bind(this);
   } 
 
@@ -29,12 +29,16 @@ class Score extends Component {
 
     getAnswer(score) {
       let answer = ""
-      if (score <= 20) {
+      if (score <= 50) {
         answer = "Golden Retriever"
-      } else if (score <= 50) {
-        answer = "Pug"
       } else if (score <= 70) {
+        answer = "Pug"
+      } else if (score <= 90) {
         answer = "Pomeranian"
+      } else if (score <= 120) {
+        answer = "Border Collie"
+      } else if (score <= 150) {
+        answer = "Chihuahua"
       } else if (score <= 200) {
         answer = "Pit Bull"
       } 
@@ -42,7 +46,7 @@ class Score extends Component {
     }
 
   render() {
-    if (this.props.scoreArray.length < 1) {
+    if (this.props.scoreArray.length < 10) {
       return null
     }
 
@@ -50,10 +54,15 @@ class Score extends Component {
     const answer = this.getAnswer(totalScore)
 
     return(
-      <div>
-        <h1>Hello!</h1>
-        {answer.dogName}
-        {answer.dogBlurb}
+      <div className="result-background">
+        <Container >
+          <img className="result-img" src={answer.imgUrl} alt="" />
+          {answer.dogName}
+          {answer.dogBlurb}
+          <Card.Title style={{marginBottom: 0}}>
+            <Button style={{backgroundColor: "#003434", marginBottom: 0}} onClick={this.props.handleRestartQuiz} variant="info">Restart</Button>
+          </Card.Title>
+        </Container>
       </div>
     )
   };

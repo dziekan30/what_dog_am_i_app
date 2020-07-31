@@ -4,8 +4,8 @@ import {Container} from 'react-bootstrap'
 
 function Header() {
   return (
-    <header>
-      <Jumbotron  style={{ backgroundColor: "#0e4a4d", color: "#e8ffa1"}}>
+    <header >
+      <Jumbotron className="header">
         <Container >
           <div className="text-center glow"   >  
             <div >
@@ -24,7 +24,7 @@ function Header() {
         </Container>
       </Jumbotron>
     </header>
-    )
+  )
 }
 
 export default Header;
