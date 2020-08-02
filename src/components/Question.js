@@ -96,11 +96,9 @@ class Question extends React.Component{
             Question {this.props.question.id}: {this.props.question.query}</Card.Header>
             <Card.Body>
 
-
             <div >
               <Card.Title >
                 <Button 
-
                   style={this.state.selectAnswerA? null: {backgroundColor: "#003434"}}  
                   size="lg" 
                   block 
