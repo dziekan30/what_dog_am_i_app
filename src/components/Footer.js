@@ -6,18 +6,18 @@ function Footer() {
     <div>
         <Jumbotron className="footer">
           <Container>
-          <div className="text-center">
-
-            <div >
-              <img  className="shadow hover" src="../dog.png" alt=""
-                  style={{borderRadius: "50%", width: "500px", height: "500px" }}
-              />
+            <div className="text-center">
+              <div >
+                <img  
+                  className="shadow hover footer-img" 
+                  src="../dog.png" 
+                  alt=""
+                />
+              </div>
+              <div className="glow">
+                <h1 className="footer-text"><span>Bow Wow Yourself Out</span></h1>
+              </div>
             </div>
-
-            <div className="glow">
-              <h1 style={{fontSize: "500%", fontWeight: "bold", letterSpacing: "5px"}} >Bow Wow Yourself Out</h1>
-            </div>
-          </div>
           </Container>
         </Jumbotron>
     </div>
